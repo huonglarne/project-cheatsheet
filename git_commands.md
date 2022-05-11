@@ -46,13 +46,25 @@ Delete both local and its remote
 
 # Staging and commit
 
-## List changes
+## List
+
+List changes
 
 `git diff --name-only`
 
-## List staged files
+List staged files
 
 `git diff --name-only --cached`
+
+List unpushed commits
+
+`git log --branches --not --remotes`
+
+## Undo
+
+Undo commit
+
+`git reset --soft HEAD`
 
 # Trouble pushing to private repo
 
