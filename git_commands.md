@@ -1,4 +1,6 @@
-# Clone private repo
+# Clone
+
+Clone private repo
 
 `git clone https://username@github.com/NAME/repo.git`
 
@@ -50,7 +52,7 @@ Delete both local and its remote
 
 `git push --delete remote-branch-name local-branch-name`
 
-# Staging and commit
+# Stage, commit and push
 
 ## List
 
@@ -72,6 +74,12 @@ Undo commit
 
 `git reset --soft HEAD`
 
-## Trouble pushing to private repo
+## Pushing
+
+Create new remote branch from push
+
+`git push -u origin remote_branch_name`
+
+Trouble pushing to orivate repo
 
 `git remote set-url origin https://username@github.com/NAME/repo.git`
