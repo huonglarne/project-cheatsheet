@@ -4,11 +4,17 @@
 
 # Config user for repo
 
+## See config for current repo
+
 `git config --list`
+
+## Set user
 
 `git config user.name "username"`
 
 `git config user.email "email"`
+
+## Store password after entering
 
 `git config credential.helper store`
 
