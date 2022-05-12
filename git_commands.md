@@ -4,7 +4,7 @@
 
 # Config user for repo
 
-Remember to config this before committing
+`git config --list`
 
 `git config user.name "username"`
 
@@ -66,6 +66,6 @@ Undo commit
 
 `git reset --soft HEAD`
 
-# Trouble pushing to private repo
+## Trouble pushing to private repo
 
-`git remote set-url origin git@github.com:username/repo.git`
+`git remote set-url origin https://username@github.com/NAME/repo.git`
