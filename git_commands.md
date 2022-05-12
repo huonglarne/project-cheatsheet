@@ -28,7 +28,7 @@ Create new branch
 
 `git checkout -b branch-name`
 
-Push branch to remote
+Push current local branch to remote
 
 `git push -u origin branch-name`
 
@@ -76,10 +76,6 @@ Undo commit
 
 ## Pushing
 
-Create new remote branch from push
-
-`git push -u origin remote_branch_name`
-
-Trouble pushing to orivate repo
+Trouble pushing to private repo
 
 `git remote set-url origin https://username@github.com/NAME/repo.git`

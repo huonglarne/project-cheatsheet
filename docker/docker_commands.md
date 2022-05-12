@@ -6,7 +6,7 @@ Specify build stage: `--target=stage_name`
 
 Specify tag for image: `-t tag_name`
 
-Build from folder: path at the end of command
+Specify building context: path at the end of command
 
 `docker build -f $DIR/../Dockerfile --target=stage_name -t tag_name $DIR/..`
 
