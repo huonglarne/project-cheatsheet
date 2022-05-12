@@ -1,0 +1,17 @@
+version: "3.9"
+services: 
+
+  # For remote attach debugging
+  debug:
+    image: debug:latest
+    env_file:
+     - .env 
+    environment:
+      VARIABLE: "value"    
+    volumes:
+      - ./folder:/folder
+    entrypoint: ["/bin/bash"]
+    ports:
+      - 5678:5678
+    depends_on:
+      - another_service
