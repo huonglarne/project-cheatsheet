@@ -79,3 +79,7 @@ Undo commit
 Trouble pushing to private repo
 
 `git remote set-url origin https://username@github.com/NAME/repo.git`
+
+Trouble pushing even after user config
+
+`git push https://<username>:<password>@github.com/<username>/<repository>.git --all`
