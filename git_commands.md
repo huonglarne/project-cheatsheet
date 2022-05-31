@@ -10,7 +10,13 @@ Clone private repo
 
 `git config --list`
 
-## Set user
+## Reset global user
+
+ `git config --global user.name ""`
+ 
+`git config --global user.email ""`
+
+## Set user for a repo
 
 `git config user.name "username"`
 
@@ -82,4 +88,4 @@ Trouble pushing to private repo
 
 Trouble pushing even after user config
 
-`git push https://<username>:<password>@github.com/<username>/<repository>.git --all`
+`git push https://username:personal_access_token@github.com/username/repository.git`
