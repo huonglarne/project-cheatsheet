@@ -74,11 +74,15 @@ List unpushed commits
 
 `git log --branches --not --remotes`
 
-## Undo
+## Commit
 
 Undo commit
 
 `git reset --soft HEAD`
+
+Change message of last commit
+
+`git commit --amend -m "new message"`
 
 ## Pushing
 
