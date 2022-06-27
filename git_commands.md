@@ -4,6 +4,10 @@ Clone private repo
 
 `git clone https://username@github.com/NAME/repo.git`
 
+Clone repo as submodule
+
+`git submodule add repo_url destination_folder`
+
 # Config user for repo
 
 ## See config for current repo
