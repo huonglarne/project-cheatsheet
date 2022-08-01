@@ -84,6 +84,10 @@ Undo commit
 
 `git reset --soft HEAD`
 
+Undo commit and unstage files
+
+`git reset HEAD`
+
 Change message of last commit
 
 `git commit --amend -m "new message"`
