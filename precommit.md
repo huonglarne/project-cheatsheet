@@ -1,10 +1,19 @@
-Install pre-commit with pip or poetry
+# Set up
+
+## Install pre-commit with pip or poetry
+
+If use poetry to install, activate the virtual environment before using.
+
+`poetry shell`
 
 Check install
 
 `pre-commit --version`
 
-Add a file in project folder .pre-commit-config.yaml
+Remember install pylint in the same environment as pre-commit.
+
+## Config
+Add `.pre-commit-config.yaml` file in project folder 
 
 ```
 repos:
@@ -62,9 +71,13 @@ repos:
 
 ```
 
-Install hook. After this, pre-commit will be ran automatically when committing.
+## Install hook
 
 `pre-commit install`
+
+# Use
+
+Pre-commit will be ran automatically when committing.
 
 Commit without pre-commit
 
