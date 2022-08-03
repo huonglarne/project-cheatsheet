@@ -4,19 +4,25 @@
 
 `poetry init`
 
-# Activate poetry environment for running in terminal
+# Use
+
+## Activate poetry environment for running in terminal
 
 `poetry shell`
 
-# Add or remove package
+## Add package
 
 `poetry add pakage-name`
 
+`poetry add pakage-name@specfic_version`
+
+## Remove package
+
 `poetry remove package-name`
 
-# Add many packages at once in order
+## Add many packages at once in order
 
-Create `requirements.txt`
+Create `requirements.txt` file
 
 ```
 # basic
