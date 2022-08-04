@@ -10,6 +10,10 @@
 
 `poetry shell`
 
+Get path to poetry environment
+
+`poetry show -v`
+
 ## Add package
 
 `poetry add pakage-name`
