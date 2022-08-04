@@ -6,6 +6,10 @@
 
 # Use
 
+## Install packages using `pyproject.toml` file
+
+`poetry install`
+
 ## Activate poetry environment for running in terminal
 
 `poetry shell`
