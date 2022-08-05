@@ -12,7 +12,7 @@ Check install
 
 `pre-commit --version`
 
-## Instal pyline
+## Instal pylint
 
 Install pylint in the same environment as pre-commit.
 
