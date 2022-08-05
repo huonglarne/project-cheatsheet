@@ -19,6 +19,7 @@ Install pylint in the same environment as pre-commit.
 Create a `.pylintrc` file in the root of project folder. See the example file in the `ci` folder.
 
 ## Config
+
 Add `.pre-commit-config.yaml` file in project folder. See the example file in the `ci` folder.
 
 ## Install hook
@@ -27,7 +28,13 @@ Add `.pre-commit-config.yaml` file in project folder. See the example file in th
 
 # Use
 
+## Initialize
+
 Remember to activate the environment where pre-commit and pylint are installed before using.
+
+Run pre-commit over all current files in the first time to init new repo.
+
+`pre-commit run --all-files`
 
 ## Basic use
 
