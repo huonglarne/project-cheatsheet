@@ -33,19 +33,13 @@ Get path to poetry environment
 Create `requirements.txt` file
 
 ```
-# basic
-python
 poetry
-
-# formatting
 pre-commit
 mypy
 black
 flake8
 isort
 pylint
-
-# testing
 pytest
 ```
 
