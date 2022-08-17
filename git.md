@@ -2,11 +2,11 @@
 
 Clone private repo
 
-`git clone https://username@github.com/NAME/repo.git`
+`git clone https://username:personal_access_token@github.com/NAME/repo.git`
 
 Clone repo as submodule
 
-`git submodule add repo_url destination_folder`
+`git submodule add repo_url`
 
 # Config user for repo
 
@@ -96,7 +96,7 @@ Change message of last commit
 
 Trouble pushing to private repo
 
-`git remote set-url origin https://username@github.com/NAME/repo.git`
+`git remote set-url origin https://username:personal_access_token@github.com/NAME/repo.git`
 
 Trouble pushing even after user config
 
