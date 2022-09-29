@@ -1,24 +1,39 @@
-FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime AS base
-ENV DEBIAN_FRONTEND=noninteractive
+FROM python:3.8.12-slim AS base_image
+ENV PIP_NO_CACHE_DIR=off \
+    PIP_DISABLE_PIP_VERSION_CHECK=on \
+    PIP_DEFAULT_TIMEOUT=100
 
-RUN apt-get update \
-    && apt-get install ffmpeg python3-opencv -y \
-    && rm -rf /var/lib/apt/lists/*
+ARG USERNAME=lc_dev
+ARG USER_UID=1006
+ARG USER_GID=1007
+ARG WORK_DIR=/home/$USERNAME
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt && rm -rf requirements.txt
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && \
+    apt-get -y install gcc && \
+    apt-get -y install openssh-client && \
+    rm -rf /var/lib/apt/lists/*
 
-WORKDIR /src
-COPY . .
+# Create the user
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --create-home --shell /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME
 
-EXPOSE 5678
+USER $USERNAME
+WORKDIR $WORK_DIR
 
-### Debug
+# venv + poetry
+ENV VENV_PATH=$WORK_DIR/venv
+ENV PATH="$VENV_PATH/bin:$PATH"
+RUN python -m venv $VENV_PATH
+RUN python -m pip install --upgrade pip setuptools wheel poetry==1.1.15
 
-FROM base AS debug
+copy just the reqs (rarely change)
+COPY --chown=$USERNAME pyproject.toml poetry.lock .env ./
 
-RUN pip install debugpy
+# install deps
+SHELL ["/bin/bash", "-c"]
+RUN source .env \
+    && poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi -vvv
 
-WORKDIR /folder
-
-CMD ["python", "-m", "debugpy", "--listen", "0000:5678", "--wait-for-client", "file.py", "--argument"]
+CMD ["/bin/bash"]
