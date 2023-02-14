@@ -2,7 +2,8 @@
 
 Clone private repo
 
-`git clone https://username:personal_access_token@github.com/NAME/repo.git`
+`git clone [https://username:personal_access_token@github.com/NAME/repo.git
+](https://username:personal_access_token@github.com/NAME/repo.git)`
 
 Clone repo as submodule
 
@@ -101,3 +102,17 @@ Trouble pushing to private repo
 Trouble pushing even after user config
 
 `git push https://username:personal_access_token@github.com/username/repository.git`
+
+# Submodule
+
+Add submodule
+
+  git submodule add https://@github.com/NAME/repo.git
+  git submodule init
+
+Make parent repo update latest change on submodule
+
+  git pull --recurse-submodules
+  git submodule update --remote
+  git commit -m 'update submodules'
+  git push
