@@ -107,12 +107,12 @@ Trouble pushing even after user config
 
 Add submodule
 
-  git submodule add https://@github.com/NAME/repo.git
-  git submodule init
+   git submodule add https://github.com/NAME/repo.git
+   git submodule init
 
 Make parent repo update latest change on submodule
 
-  git pull --recurse-submodules
-  git submodule update --remote
-  git commit -m 'update submodules'
-  git push
+   git pull --recurse-submodules
+   git submodule update --remote
+   git commit -m 'update submodules'
+   git push
