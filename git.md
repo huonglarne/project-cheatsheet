@@ -114,5 +114,6 @@ Make parent repo update latest change on submodule
 
     git pull --recurse-submodules
     git submodule update --remote
+    git add .
     git commit -m 'update submodules'
     git push
