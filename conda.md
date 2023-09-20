@@ -12,6 +12,10 @@ Create environment
 
 `conda create --name env_name python=3.x`
 
+Set variable
+
+`conda env config vars set MY_VAR=value`
+
 ## Packages
 
 Install
